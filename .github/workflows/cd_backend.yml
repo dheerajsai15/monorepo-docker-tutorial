@@ -17,8 +17,6 @@ jobs:
       
       - name: Build and push
         uses: docker/build-push-action@v4
-        env: # Define the environment variable here
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
         with:
           context: .
           file: ./docker/Dockerfile.backend
